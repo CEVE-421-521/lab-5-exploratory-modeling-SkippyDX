@@ -9,18 +9,18 @@ format:
 
     # YOU DO NOT NEED BOTH PDF AND DOCX.
     # COMMENT OR DELETE THE ONE YOU DON'T WANT TO USE.
-    pdf:
-        documentclass: article
-        fontsize: 11pt
-        geometry:
-            - margin=1in  
-        number-sections: true
-        code-line-numbers: true
-    #docx: 
-    #    toc: true
-    #    fig-format: png
+    #pdf:
+    #    documentclass: article
+    #    fontsize: 11pt
+    #    geometry:
+    #        - margin=1in  
     #    number-sections: true
     #    code-line-numbers: true
+    docx: 
+        toc: true
+        fig-format: png
+        number-sections: true
+        code-line-numbers: true
 
 date-format: "ddd., MMM. D"
 bibliography: references.bib
@@ -266,7 +266,7 @@ end
     scatter(
         damage,
         npv;
-        xlabel="Expected Damage without elevating or sea rise (ft)",
+        xlabel="Expected flood height from the guage (ft)",
         ylabel="NPV",
         label="The NPV under 10 different SOW's compared to the expected flood height from the gauge",
         legend=:bottomright,
